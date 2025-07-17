@@ -40,13 +40,13 @@ jobs:
 
             - name: Build wheels
               run: python setup.py sdist bdist_wheel
-              working-directory: ./fhe_http_python
+              working-directory: ./fhe_python
 
             - name: Upload wheels as artifact
               uses: actions/upload-artifact@v4
               with:
                   name: wheels-${{ matrix.os }}
-                  path: ./fhe_http_python/dist
+                  path: ./fhe_python/dist
                   if-no-files-found: error
 
     publish:

@@ -1,0 +1,18 @@
+[package]
+name = "fhe_js"
+version = "0.1.0"
+description = "Js interface for fhe-language-binding"
+authors = ["spockwall"]
+license = "ISC"
+edition = "2021"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+
+[dependencies]
+fhe_core = { path = "../../../fhe_core" }
+neon-macros = "1.1.0-alpha.0"
+neon = "1.1.0-alpha.0"
+thiserror = "1.0.29"

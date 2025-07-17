@@ -1,0 +1,29 @@
+{
+  "name": "fhe_web",
+  "version": "1.0.0",
+  "description": "## Introduce - This package utilizes the **js-on-wasm-api** module from tfhe-rs to provide a JavaScript interface for web browsers, enabling communication with **fhe_js** running on `Node.js`. This service allows frontend users to securely outsource tasks within the ciphertext space. - This package is only for client side, so the operations on ciphertext space is not allowed.  - Reminder:    - This package can only be run in web browsers.   - GPU acceleration is not available in this project.",
+  "scripts": {
+    "build": "webpack",
+    "tfhe-build": "./build_tfhe_web_pkg.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/tfhe.js",
+      "require": "./src/tfhe.js"
+    },
+    "./extend": {
+      "import": "./src/custom.js",
+      "require": "./src/custom.js"
+    }
+  }
+}

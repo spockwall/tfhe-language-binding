@@ -1,0 +1,26 @@
+[build-system]
+requires = [
+    "maturin>=1.5,<2.0",
+    "setuptools>=68.2.2",
+    "setuptools_scm[toml]>=8.0.0",
+    "setuptools-rust>=1.9.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fhe-language-binding"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+readme = "README.md"
+
+#[tool.maturin]
+#features = ["pyo3/extension-module"]
+
+
+#[tool.setuptools_scm]
+#write_to = "fhe_http/_version.py"

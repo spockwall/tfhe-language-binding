@@ -1,3 +1,3 @@
 [workspace]
 
-members = ["fhe_http_core", "fhe_http_python", "fhe_http_js/crates/fhe_http_js"]
+members = ["fhe_core", "fhe_python", "fhe_js/crates/fhe_js"]
